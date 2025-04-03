@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licomes Rental Proposal</title>
+    <title>Licornes Rent</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             color: white;
         }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
         .container {
+            max-width: 800px;
+            margin: 50px auto;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 40px;
             border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
             text-align: center;
             box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
         }
         h2 {
             font-size: 26px;
             margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
         }
         .form-group {
             margin-bottom: 15px;
@@ -69,26 +84,44 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Propose Licomes Rent</h2>
+    <div class="nav">
+        <a href="#about">Qui sommes-nous ?</a>
+        <a href="#services">Nos services</a>
+        <a href="#contact">Nous contacter</a>
+    </div>
+    
+    <div class="container" id="about">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Licornes Rent est une entreprise spécialisée dans la location de licornes pour tous types d'événements magiques. Nous apportons une touche féérique à vos occasions spéciales !</p>
+    </div>
+    
+    <div class="container" id="services">
+        <h2>Nos Services</h2>
+        <p>Nous proposons différents services de location de licornes adaptés à chaque événement :</p>
+        <ul>
+            <li>Mariage : Rendez votre jour spécial encore plus magique.</li>
+            <li>Anniversaire : Offrez une surprise féérique inoubliable.</li>
+            <li>Baptême : Un instant de rêve pour votre enfant et vos invités.</li>
+        </ul>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2>Nous Contacter</h2>
+        <p>Remplissez le formulaire ci-dessous pour toute demande :</p>
         <form action="#" method="POST">
             <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="name">Votre Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
             </div>
             <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
             </div>
             <div class="form-group">
-                <label for="duration">Rental Duration (in months):</label>
-                <input type="number" id="duration" name="duration" placeholder="Enter duration" required>
+                <label for="message">Votre Message :</label>
+                <textarea id="message" name="message" rows="4" placeholder="Entrez votre message"></textarea>
             </div>
-            <div class="form-group">
-                <label for="message">Additional Information:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
-            </div>
-            <button type="submit">Submit Proposal</button>
+            <button type="submit">Envoyer</button>
         </form>
     </div>
 </body>
